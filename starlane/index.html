@@ -1,86 +1,171 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Download Starlane</title>
 
+  <meta name="description" content="Download Starlane on Google Play. Dodge asteroids, survive combat, collect upgrades, and climb the leaderboard." />
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+    }
+
+    body {
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1b2b6f, #050816 70%);
-      color: white;
+      background:
+        linear-gradient(rgba(3, 8, 24, 0.62), rgba(3, 8, 24, 0.78)),
+        url("BackgroundImageStarlane.PNG") center center / cover no-repeat fixed;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 24px;
     }
 
     .card {
-      max-width: 420px;
+      width: 100%;
+      max-width: 460px;
+      text-align: center;
+      padding: 34px 26px;
+      border-radius: 24px;
+      background: rgba(8, 18, 48, 0.58);
+      border: 1px solid rgba(120, 220, 255, 0.18);
+      box-shadow: 0 0 35px rgba(0, 180, 255, 0.13);
+      backdrop-filter: blur(6px);
     }
 
-    img {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      margin-bottom: 18px;
+    .badge {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(55, 208, 111, 0.12);
+      border: 1px solid rgba(55, 208, 111, 0.38);
+      color: #8fffc1;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
     h1 {
-      font-size: 32px;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 18px rgba(80, 220, 255, 0.25);
     }
 
-    p {
+    .subtitle {
+      margin: 0 auto 28px;
+      max-width: 360px;
       font-size: 16px;
-      line-height: 1.5;
-      opacity: 0.9;
-      margin-bottom: 24px;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.88);
     }
 
-    a.button {
+    .button {
       display: inline-block;
+      width: 100%;
+      max-width: 290px;
+      padding: 16px 22px;
+      border-radius: 15px;
       background: #35d06f;
-      color: #06110a;
+      color: #06120b;
       text-decoration: none;
-      font-weight: bold;
-      padding: 16px 24px;
-      border-radius: 14px;
       font-size: 18px;
-      margin-bottom: 18px;
+      font-weight: 800;
+      box-shadow: 0 0 22px rgba(53, 208, 111, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .button:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 12px rgba(53, 208, 111, 0.22);
     }
 
     .fallback {
+      margin-top: 22px;
       font-size: 14px;
-      opacity: 0.8;
-      margin-top: 16px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.74);
     }
 
     .game-name {
-      font-weight: bold;
       color: #7cffb2;
+      font-weight: 800;
+    }
+
+    .small-note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.48);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 18px;
+        background-attachment: scroll;
+      }
+
+      .card {
+        padding: 30px 22px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .button {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
+  <main class="card">
+    <div class="badge">Free Android Arcade Game</div>
+
     <h1>Starlane</h1>
-    <p>
+
+    <p class="subtitle">
       Dodge asteroids, survive combat, collect upgrades, and climb the leaderboard.
     </p>
 
-    <a class="button" href="https://play.google.com/store/apps/details?id=com.voidpath.starlane&referrer=utm_source%3Dinstagram%26utm_medium%3Dstory%26utm_campaign%3Dnetolyra_story2">
+    <a
+      class="button"
+      href="https://play.google.com/store/apps/details?id=com.voidpath.starlane&referrer=utm_source%3Dinstagram%26utm_medium%3Dstory%26utm_campaign%3Dnetolyra_story2"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Download on Google Play
     </a>
 
     <div class="fallback">
-      If the button does not work, search <span class="game-name">Starlane</span> on Google Play.
+      If the button does not work, search
+      <span class="game-name">Starlane</span>
+      on Google Play.
     </div>
-  </div>
+
+    <div class="small-note">
+      Available on Android
+    </div>
+  </main>
 </body>
 </html>
+```
